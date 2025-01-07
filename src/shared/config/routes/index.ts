@@ -1,6 +1,5 @@
 export const PathNames = {
-	root: '/',
-	auth: '/auth',
+	root: '/'
 } as const
 
 export type PathNamesKeys = keyof typeof PathNames

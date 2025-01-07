@@ -9,15 +9,15 @@ import sitemap from "vite-plugin-sitemap"
 export default defineConfig({
   plugins: [
     react(),
-    sitemap({ hostname: "https://www.FastFoodTips.com" }),
+    sitemap({ hostname: "https://www.cryptodrop.com" }),
     compression({ algorithm: "gzip" }) as PluginOption,
     legacy({ targets: ["defaults", "not IE 11"] }),
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "robots.txt"],
       manifest: {
-        name: "FastFoodTips",
-        short_name: "FastFoodTips",
+        name: "CryptoDrop",
+        short_name: "CryptoDrop",
         description: "Internet tip sending",
         theme_color: "#2b2738",
       },
@@ -35,7 +35,7 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: /^https:\/\/api\.FastFoodTips\.com\/.*$/,
+            urlPattern: /^https:\/\/api\.CryptoDrop\.com\/.*$/,
             handler: "NetworkFirst",
             options: {
               cacheName: "api-cache",
@@ -47,7 +47,7 @@ export default defineConfig({
           },
         ],
       },
-    }) as unknown as PluginOption,
+    }),
   ],
   css: {
     preprocessorOptions: {
@@ -72,7 +72,6 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      "/api": 'https://47b4-2a02-8071-6282-a220-80dd-da05-b18b-ba12.ngrok-free.app/',
       // "/api": {
       //   target: "https://47b4-2a02-8071-6282-a220-80dd-da05-b18b-ba12.ngrok-free.app",
       //   changeOrigin: true,
@@ -81,7 +80,7 @@ export default defineConfig({
       //   rewrite: path => path.replace(/^\/api/, ""),
       // },
       // "/ws": {
-      //   target: "wss://api.codersbud.com",
+      //   target: "wss://api.cryptodrop.com",
       //   ws: true,
       //   rewrite: path => path.replace(/^\/ws/, "/chat"),
       //   changeOrigin: true,
