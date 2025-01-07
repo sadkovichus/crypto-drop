@@ -1,4 +1,4 @@
-import { useTelegramUser } from '@shared/hooks/useTelegramUser'
+import { useTelegramUser } from '@shared/hooks'
 import s from './MainLayout.module.scss';
 import { useEffect } from 'react'
 
@@ -12,5 +12,5 @@ export const MainLayout = () => {
 		console.log(user);
 	}, [user])
 
-  return <div className={s.layout}>Main Layout</div>;
+  return <div className={s.layout}>Соси хуй никита, лошара ебаный бля пидора лох бля лох какашка лох бля нахуй лох бля</div>;
 };

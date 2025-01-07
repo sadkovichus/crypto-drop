@@ -1,2 +1,3 @@
-import { useDynamicMeta } from './useDynamicMeta'
-export { useDynamicMeta }
+import { useTelegramUser } from './useTelegramUser'
+
+export { useTelegramUser }
