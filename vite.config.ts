@@ -72,21 +72,13 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      // "/api": {
-      //   target: "https://47b4-2a02-8071-6282-a220-80dd-da05-b18b-ba12.ngrok-free.app",
-      //   changeOrigin: true,
-      //   secure: true,
-      //   cookieDomainRewrite: "localhost",
-      //   rewrite: path => path.replace(/^\/api/, ""),
-      // },
-      // "/ws": {
-      //   target: "wss://api.cryptodrop.com",
-      //   ws: true,
-      //   rewrite: path => path.replace(/^\/ws/, "/chat"),
-      //   changeOrigin: true,
-      //   rewriteWsOrigin: true,
-      //   secure: true,
-      // },
+      "/api": {
+        target: "https://47b4-2a02-8071-6282-a220-80dd-da05-b18b-ba12.ngrok-free.app",
+        changeOrigin: true,
+        secure: true,
+        cookieDomainRewrite: "localhost",
+        rewrite: path => path.replace(/^\/api/, ""),
+      },
     },
     hmr: { overlay: true },
     fs: {
